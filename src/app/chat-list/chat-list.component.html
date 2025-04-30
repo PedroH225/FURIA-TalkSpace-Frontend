@@ -1,33 +1,12 @@
     <div class="chat-container">
     <div class="chat-list">
-        <div class="chat-item">
+        <div class="chat-item" *ngFor="let chat of chats">
             <div class="chat-avatar"></div>
             <div class="chat-info">
-                <div class="chat-name">João Silva</div>
-                <div class="chat-preview">Oi, tudo bem?</div>
+              <div class="chat-name">{{ chat.nome }}</div>
+              <div class="chat-preview">{{ chat.descricao }}</div>
             </div>
-        </div>
-        <div class="chat-item">
-            <div class="chat-avatar"></div>
-            <div class="chat-info">
-                <div class="chat-name">Maria Oliveira</div>
-                <div class="chat-preview">Vamos sair mais tarde?</div>
-            </div>
-        </div>
-        <div class="chat-item">
-            <div class="chat-avatar"></div>
-            <div class="chat-info">
-                <div class="chat-name">Carlos Pereira</div>
-                <div class="chat-preview">Preciso de ajuda com o projeto.</div>
-            </div>
-        </div>
-        <div class="chat-item">
-            <div class="chat-avatar"></div>
-            <div class="chat-info">
-                <div class="chat-name">Fernanda Lima</div>
-                <div class="chat-preview">Vamos agendar a reunião?</div>
-            </div>
-        </div>
+          </div>
     </div>
 
     <app-chat-content></app-chat-content>
