@@ -1,0 +1,38 @@
+@import '../../styles.scss';
+.cor-texto {
+    color: $CORTEXTO;
+}
+.logo-palavras span {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem; /* Ajuste o tamanho conforme necessário */
+    color: #FFF; /* Defina a cor do texto como branco */
+  }
+
+.nav-tamanho {
+    height: 120px;
+}
+
+.tamanho-imagem {
+    width: 6rem;
+}
+
+.tamanho-imagem-2 {
+    width: 8rem;
+}
+
+.navbar-brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-palavras {
+    display: flex;
+    flex-direction: column;
+}
+
+.texto-nav {
+    color: $CORTEXTO;
+    font-size: 25px;
+}
