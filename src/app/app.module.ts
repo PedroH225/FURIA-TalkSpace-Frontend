@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { ChatListComponent } from './chat-list/chat-list.component';
+import { ChatContentComponent } from './chat-content/chat-content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ChatListComponent,
+    ChatContentComponent
   ],
   imports: [
     BrowserModule,
