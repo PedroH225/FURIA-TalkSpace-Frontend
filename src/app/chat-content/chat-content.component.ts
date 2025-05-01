@@ -10,6 +10,10 @@ import { ChatServiceService } from '../services/chat-service.service';
 export class ChatContentComponent implements OnChanges {
   @Input() chatId: string | null = null;
   chat: any;
+  @Input() mensagem : string = '';
+
+  mensagens : any[] = [];
+
 
   constructor(private chatService : ChatServiceService) {
 
@@ -17,15 +21,36 @@ export class ChatContentComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['chatId'] && this.chatId !== null) {
-      this.loadChatMessages(this.chatId);
+      this.loadChat(this.chatId);
+      this.loadMensagens(this.chatId);
     }
   }
 
-  loadChatMessages(chatId: string): void {
-    this.chatService.getEventosMensagens(chatId).subscribe(
+  loadChat(chatId: string): void {
+    this.chatService.getEvento(chatId).subscribe(
       (response : any) => {
         this.chat = response;
       })
+}
+
+loadMensagens(chatId : string) {
+  this.chatService.getEventoMensagens(chatId).subscribe(
+    (response : any) => {
+      this.mensagens = response;
+    })
+}
+
+enviarMensagem() {
+  if (!this.mensagem.trim()) return;
+
+  const payload = {
+    conteudo: this.mensagem,
+    dataEnvio: new Date()
+  };
+
+  this.chatService.enviarMensagem(this.chat.id, payload).subscribe(res => {
+    this.mensagem = '';
+  });
 }
 
 }

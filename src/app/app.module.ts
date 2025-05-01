@@ -9,6 +9,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ChatListComponent } from './chat-list/chat-list.component';
 import { ChatContentComponent } from './chat-content/chat-content.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
