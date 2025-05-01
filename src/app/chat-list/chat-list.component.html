@@ -1,13 +1,13 @@
-    <div class="chat-container">
-    <div class="chat-list">
-        <div class="chat-item" *ngFor="let chat of chats">
-            <div class="chat-avatar"></div>
-            <div class="chat-info">
-              <div class="chat-name">{{ chat.nome }}</div>
-              <div class="chat-preview">{{ chat.descricao }}</div>
-            </div>
-          </div>
+<div class="chat-container">
+  <div class="chat-list">
+    <div class="chat-item" *ngFor="let chat of chats" (click)="onChatSelect(chat.id)">
+      <div class="chat-avatar"></div>
+      <div class="chat-info">
+        <div class="chat-name">{{ chat.nome }}</div>
+        <div class="chat-preview">{{ chat.descricao }}</div>
+      </div>
     </div>
+  </div>
 
-    <app-chat-content></app-chat-content>
+  <app-chat-content [chatId]="selectedChatId"></app-chat-content>
 </div>

@@ -18,4 +18,12 @@ export class ChatServiceService {
       headers: {'Authorization': `Bearer ${token}` }
     });
   }
+
+  getEventosMensagens(eventoId : string): Observable<any[]> {
+    const token = localStorage.getItem('token');
+
+    return this.http.get<any[]>(`${this.apiUrl}/chats/${eventoId}`, {
+      headers: {'Authorization': `Bearer ${token}` }
+    });
+  }
 }
