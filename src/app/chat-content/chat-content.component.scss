@@ -95,6 +95,17 @@ body {
     word-wrap: break-word;
 }
 
+.message-date {
+    font-size: 13px;
+
+}
+
+.message-author {
+    font-size: 14px;
+
+}
+
+
 .message.sent .message-text {
     background-color: #3498db;
     color: #fff;

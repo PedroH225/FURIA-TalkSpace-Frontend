@@ -1,18 +1,26 @@
 <div class="chat-content" *ngIf="chat">
-    <div class="chat-header">
-      <div class="chat-avatar"></div>
-      <div class="chat-name">{{ chat.nome }}</div>
-    </div>
-    <div class="chat-messages">
-      <div *ngFor="let mensagem of chat.mensagens">
-        <div class="message sent">
-          <div class="message-text">{{ mensagem.conteudo }}</div>
-        </div>
+  <div class="chat-header">
+    <div class="chat-avatar"></div>
+    <div class="chat-name">{{ chat.nome }}</div>
+  </div>
+
+  <div class="chat-messages">
+    <div *ngFor="let mensagem of chat.mensagens">
+      <div class="message sent" *ngIf="mensagem.autor">
+        <div class="message-text">{{ mensagem.conteudo }}</div>
+        <div class="message-date">{{ mensagem.dataEnvio | date: 'short' }}</div>
+      </div>
+
+      <div class="message received" *ngIf="!mensagem.autor">
+        <div class="message-author">{{ mensagem.usuario.nome }}</div>
+        <div class="message-text">{{ mensagem.conteudo }}</div>
+        <div class="message-date">{{ mensagem.dataEnvio | date: 'short' }}</div>
       </div>
     </div>
-    <div class="chat-input">
-      <input type="text" placeholder="Digite uma mensagem...">
-      <button>Enviar</button>
-    </div>
   </div>
-  
+
+  <div class="chat-input">
+    <input type="text" placeholder="Digite uma mensagem...">
+    <button>Enviar</button>
+  </div>
+</div>

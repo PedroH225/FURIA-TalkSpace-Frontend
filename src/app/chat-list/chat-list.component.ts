@@ -18,7 +18,7 @@ export class ChatListComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     // Exemplo de token, remova isso quando for integrar com a autenticação real
-    localStorage.setItem("token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoIiwic3ViIjoiYjYzNGJlY2YtNDdmOS00Yzk5LWE0NWUtZjAwZjUzMWUyOWJiIn0.r9gY2C3rru_VeJwYlNiGlZWGa6DgVr8ElwaRsZBuOz0");
+    localStorage.setItem("token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoIiwic3ViIjoiYjJjM2Q0ZTUtZjY3OC05MDEyLWJjMzQtZGU1NmZhNzhnaDkwIiwiZXhwIjoxNzQ2MTM5Mjc5fQ.AUjA7uHZkvcz2WX5Cii5m8-v9128-gf5064Jfd7WzGE");
 
     // Buscar chats
     this.buscarChats();
@@ -47,6 +47,5 @@ export class ChatListComponent implements OnInit, AfterViewInit {
 
   onChatSelect(chatId: string): void {
     this.selectedChatId = chatId;
-    console.log('Chat selecionado:', chatId);
   }
 }
