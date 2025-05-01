@@ -10,6 +10,7 @@ import { ChatServiceService } from '../services/chat-service.service';
 export class ChatListComponent implements OnInit, AfterViewInit {
   chats: any[] = [];
   selectedChatId: string | null = null;  // Variável para armazenar o chat selecionado
+  usuarioId : string = '';
 
   constructor(
     private chatService: ChatServiceService,
@@ -40,6 +41,7 @@ export class ChatListComponent implements OnInit, AfterViewInit {
   buscarChats() {
     this.chatService.getEventos().subscribe(
       (response: any) => {
+        this.usuarioId = response.id
         this.chats = response.chatsParticipados;
       }
     );

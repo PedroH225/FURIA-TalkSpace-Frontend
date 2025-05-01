@@ -4,7 +4,7 @@
       <div class="chat-name">{{ chat.nome }}</div>
     </div>
   
-    <div class="chat-messages">
+    <div class="chat-messages" #chatMessages>
       <div *ngFor="let mensagem of mensagens">
         <div class="message sent" *ngIf="mensagem.autor">
           <div class="message-text">{{ mensagem.conteudo }}</div>

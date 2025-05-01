@@ -44,6 +44,8 @@ body {
     flex-direction: column;
     background-color: #fff;
     padding: 20px;
+    height: 100%; /* Garantir que a div ocupe toda a altura possível */
+    max-height: calc(100vh - 80px); /* Subtraia o tamanho do cabeçalho (aproximadamente 80px) */
 }
 
 .chat-header {
@@ -68,11 +70,12 @@ body {
 .chat-messages {
     flex: 1;
     padding: 10px;
-    overflow-y: auto;
+    overflow-y: auto; /* Sempre mostrar a barra de rolagem, mesmo que não seja necessário */
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Alinha as mensagens ao fundo */
+    scrollbar-width: thin; /* Para navegadores com suporte */
+    scrollbar-color: #3498db #f4f4f4; /* Cor da barra de rolagem */
 }
 
 .message {
@@ -140,4 +143,18 @@ body {
 
 .chat-input button:hover {
     background-color: #2980b9;
+}
+
+/* Para navegadores Webkit (como Chrome, Safari) */
+.chat-messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background-color: #3498db;
+    border-radius: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background-color: #f4f4f4;
 }
