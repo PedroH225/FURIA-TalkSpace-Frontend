@@ -1,6 +1,9 @@
+@import '../../styles.scss';
+
 .chat-container {
     display: flex;
-    height: 85vh; /* ocupa a altura toda da tela */
+    height: 80vh; /* ocupa a altura toda da tela */
+    
 }
 
 .chat-list {
@@ -11,6 +14,8 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
     z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8); // branco com 80% de opacidade
+
 }
 
 .chat-item {
@@ -33,7 +38,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #3498db;
+    background-color: $FURIAPRETO;
     margin-right: 10px;
 }
 
