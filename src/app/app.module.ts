@@ -10,6 +10,7 @@ import { ChatListComponent } from './chat-list/chat-list.component';
 import { ChatContentComponent } from './chat-content/chat-content.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     FooterComponent,
     ChatListComponent,
-    ChatContentComponent
+    ChatContentComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
