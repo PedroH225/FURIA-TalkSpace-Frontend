@@ -1,0 +1,75 @@
+@import '../../styles.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0; // Adiciona espaço sem exagero
+    min-height: 85vh;
+  }
+  
+  .login-card {
+    background-color: rgba(255, 255, 255, 0.6); // branco com opacidade
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    width: 350px
+  }
+  
+  .login-logo {
+    width: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .login-title {
+    color: $FURIAPRETO;
+    margin-bottom: 30px;
+  }
+  
+  .login-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    font-size: 14px;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .login-button:hover {
+    background-color: #111;
+  }
+  
+  .login-footer {
+    color: #ccc;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .login-footer a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .error-message {
+    color: red;
+  }
