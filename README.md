@@ -1,28 +1,38 @@
-# XetDaFuria
+# FURIA TalkSpace Frontend
+## Descrição
+A **FURIA TalkSpace**, é uma plataforma digital de chats voltada para os fãs das equipes da organização FURIA eSports. A plataforma permite que os torcedores se comuniquem entre si sobre as diferentes equipes da FURIA em diversos jogos, por meio de chats com diversos temas.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
+## Tecnologias
+- **Angular 19** – Framework web para construção da interface do usuário.
+- **Bootstrap 5** – Estilização responsiva e componentes visuais.
+- **@ng-bootstrap/ng-bootstrap** – Integração de componentes Bootstrap com Angular.
+- **SockJS** e **@stomp/stompjs** – Comunicação em tempo real via WebSocket com fallback.
+- **TypeScript** – Linguagem usada para desenvolver o frontend com tipagem estática.
 
-## Development server
+## Como instalar e executar o frontend
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Pré-requisitos
 
-## Code scaffolding
+- [Node.js](https://nodejs.org/) (versão 18 ou superior)
+- [Angular CLI](https://angular.io/cli) (instalar globalmente com o comando abaixo)
+- [Backend](https://github.com/PedroH225/FURIA-TalkSpace-Backend#)(Execução na porta 8080)
+- Acesso à internet para instalar dependências
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Execução
+1. Clone o repositório e acesse a pasta do frontend
+```bash
+git clone git@github.com:PedroH225/FURIA-TalkSpace-Frontend.git
+cd FURIA-TalkSpace-Frontend/
+```
 
-## Build
+2. Instale as dependências
+```bash
+npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. Acesse o projeto no navegador
+Link: http://localhost:4200
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-# xet-da-furia-frontend
+## Funcionalidades
+- **Chats** - Participar de chats de variados jogos e temas;
+- **Conversas** - Conversar com torcedores da FURIA em tempo real.
