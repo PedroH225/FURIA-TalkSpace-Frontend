@@ -22,4 +22,11 @@ constructor(private comunidadeService : ComunidadeService) {}
       this.chats = response;
     })
   }
+
+  participar(chatId : string) {
+    this.comunidadeService.participar(chatId).subscribe(() => {
+      	this.carregarChats();
+        alert("Chat ingressado com sucesso!");
+    })
+  }
 }

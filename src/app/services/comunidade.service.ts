@@ -17,4 +17,11 @@ export class ComunidadeService {
         headers: { 'Authorization': `Bearer ${token}` }
       });
     }
+
+    participar(chatId : string): Observable<any> {
+      const token = localStorage.getItem('token');
+      return this.http.put<any[]>(`${this.apiUrl}/chats/addUser/${chatId}`, {}, {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+    }
 }
