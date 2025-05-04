@@ -1,5 +1,9 @@
+
 <div class="chat-container">
   <div class="chat-list">
+    <div *ngIf="chats.length === 0" class="no-chats-message">
+      Você não está participando de nenhum chat.
+    </div>
     <div class="chat-item" *ngFor="let chat of chats" (click)="onChatSelect(chat.id)">
       <div class="chat-avatar"></div>
       <div class="chat-info">
