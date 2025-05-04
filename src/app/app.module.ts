@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
+import { ComunidadeComponent } from './comunidade/comunidade.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { RegistroComponent } from './registro/registro.component';
     ChatListComponent,
     ChatContentComponent,
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    ComunidadeComponent
   ],
   imports: [
     BrowserModule,
