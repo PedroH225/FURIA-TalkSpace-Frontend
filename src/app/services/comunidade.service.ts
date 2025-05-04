@@ -24,4 +24,11 @@ export class ComunidadeService {
         headers: { 'Authorization': `Bearer ${token}` }
       });
     }
+
+    retirarParticipacao(chatId : string): Observable<any> {
+      const token = localStorage.getItem('token');
+      return this.http.delete<any[]>(`${this.apiUrl}/chats/removerUser/${chatId}`, {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+    }
 }

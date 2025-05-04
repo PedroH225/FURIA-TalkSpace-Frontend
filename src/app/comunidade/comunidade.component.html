@@ -10,7 +10,7 @@
       Participar
     </button>
 
-    <button class="btn-retirar" *ngIf="chat.participando">
+    <button class="btn-retirar" *ngIf="chat.participando" (click)="retirarParticipacao(chat.id)">
       Retirar Participação
     </button>
   </div>

@@ -29,4 +29,11 @@ constructor(private comunidadeService : ComunidadeService) {}
         alert("Chat ingressado com sucesso!");
     })
   }
+
+  retirarParticipacao(chatId : string) {
+    this.comunidadeService.retirarParticipacao(chatId).subscribe(() => {
+      	this.carregarChats();
+        alert("Participacao retirada com sucesso!");
+    })
+  }
 }
