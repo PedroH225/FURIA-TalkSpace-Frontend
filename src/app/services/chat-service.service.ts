@@ -44,6 +44,8 @@ export class ChatServiceService {
   }
 
   connect(chatId: string) {
+    this.disconnect();
+
     const socket = new SockJS(`${this.apiUrl}/ws`); // URL do endpoint STOMP via SockJS
     this.stompClient = new Client({
       webSocketFactory: () => socket as any, // Use webSocketFactory com SockJS

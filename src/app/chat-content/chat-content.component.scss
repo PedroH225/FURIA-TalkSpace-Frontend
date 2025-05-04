@@ -81,7 +81,7 @@ body {
     overflow-y: auto; /* Sempre mostrar a barra de rolagem, mesmo que não seja necessário */
     background-color: transparent; // branco com 80% de opacidade
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     scrollbar-width: thin; /* Para navegadores com suporte */
     scrollbar-color: $FURIAPRETO #f4f4f4; /* Cor da barra de rolagem */
 }

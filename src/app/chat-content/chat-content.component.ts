@@ -36,6 +36,7 @@ export class ChatContentComponent implements OnChanges, OnDestroy {
 
   ngOnDestroy(): void {
     this.messageSubscription?.unsubscribe();
+    this.chatService.disconnect();
   }
 
   connectToWebSocket(chatId: string): void {

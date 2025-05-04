@@ -5,7 +5,7 @@
     </div>
   
     <div class="chat-messages" #chatMessages>
-      <div *ngFor="let mensagem of mensagens">
+      <div *ngFor="let mensagem of mensagens.slice().reverse()">
         <div class="message sent" *ngIf="mensagem.autor">
           <div class="message-text">{{ mensagem.conteudo }}</div>
           <div class="message-date">{{ mensagem.dataEnvio | date: 'short' }}</div>
