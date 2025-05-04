@@ -1,0 +1,60 @@
+@import '../../styles.scss';
+
+.comunidade-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .comunidade-card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    max-height: 320px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .comunidade-card h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+  }
+  
+  .comunidade-descricao {
+    flex-grow: 1;
+    margin: 10px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limita a 2 linhas */
+    -webkit-box-orient: vertical;
+  }
+  
+  
+  button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .btn-participar {
+    background-color: $FURIAPRETO;
+    color: white;
+  }
+  
+  .btn-retirar {
+    background-color: #dc3545;
+    color: white;
+  }
+  

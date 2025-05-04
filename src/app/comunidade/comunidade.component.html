@@ -1,1 +1,15 @@
-<p>comunidade works!</p>
+<div class="comunidade-container">
+    <div class="comunidade-card" *ngFor="let chat of chats">
+      <h2>{{ chat.nome }}</h2>
+      <p class="comunidade-descricao">{{ chat.descricao }}</p>
+      <p><strong>Jogo:</strong> {{ chat.jogo }}</p>
+      <p><strong>Tema:</strong> {{ chat.tema }}</p>
+      <p><strong>Criado em:</strong> {{ chat.criadaEm }}</p>
+  
+      <button
+        [ngClass]="chat.participando ? 'btn-retirar' : 'btn-participar'">
+        {{ chat.participando ? 'Retirar participação' : 'Participar' }}
+      </button>
+    </div>
+  </div>
+  

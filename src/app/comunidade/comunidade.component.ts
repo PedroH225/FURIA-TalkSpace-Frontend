@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ComunidadeService } from '../services/comunidade.service';
 
 @Component({
   selector: 'app-comunidade',
@@ -6,6 +7,19 @@ import { Component } from '@angular/core';
   templateUrl: './comunidade.component.html',
   styleUrl: './comunidade.component.scss'
 })
-export class ComunidadeComponent {
+export class ComunidadeComponent implements OnInit{
+chats : any[] = [];
 
+constructor(private comunidadeService : ComunidadeService) {}
+
+  
+  ngOnInit() : void {
+    this.carregarChats();
+  }
+
+  carregarChats() {
+    this.comunidadeService.getChats().subscribe((response) => {
+      this.chats = response;
+    })
+  }
 }
