@@ -1,0 +1,17 @@
+<div class="comunidade-container">
+  <div class="comunidade-card" *ngFor="let chat of chats">
+    <h2>{{ chat.nome }}</h2>
+    <p class="comunidade-descricao">{{ chat.descricao }}</p>
+    <p><strong>Jogo:</strong> {{ chat.jogo }}</p>
+    <p><strong>Tema:</strong> {{ chat.tema }}</p>
+    <p><strong>Criado em:</strong> {{ chat.criadaEm }}</p>
+
+    <button class="btn-participar" *ngIf="!chat.participando" (click)="participar(chat.id)">
+      Participar
+    </button>
+
+    <button class="btn-retirar" *ngIf="chat.participando" (click)="retirarParticipacao(chat.id)">
+      Retirar Participação
+    </button>
+  </div>
+</div>

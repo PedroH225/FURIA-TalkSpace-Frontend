@@ -1,0 +1,16 @@
+<div class="login-container">
+    <div class="login-card">
+      <img src="assets/furia-logo-png_seeklogo-526137.png" alt="Logo" class="login-logo">
+      <h2 class="login-title">Registrar no Xet da FURIA</h2>
+      <form (ngSubmit)="fazerRegistro()">
+        <input type="text" placeholder="Nome" [(ngModel)]="nome" name="nome" class="login-input" required>
+        <input type="email" placeholder="Email" [(ngModel)]="email" name="email" class="login-input" required>
+        <input type="password" placeholder="Senha" [(ngModel)]="senha" name="senha" class="login-input" required>
+        <input type="password" placeholder="Confirmar Senha" [(ngModel)]="confirmarSenha" name="confirmarSenha" class="login-input" required>
+        <button type="submit" class="login-button">Registrar</button>
+      </form>
+      <p class="login-footer">Já tem uma conta? <a href="/login">Entre aqui</a></p>
+      <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+    </div>
+  </div>
+  

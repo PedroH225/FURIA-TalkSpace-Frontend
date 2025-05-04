@@ -1,0 +1,67 @@
+@import '../../styles.scss';
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .login-card {
+    background-color: rgba(255, 255, 255, 0.6); // branco com opacidade
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+  }
+  
+  .login-logo {
+    max-width: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .login-title {
+    font-size: 22px;
+    color: $FURIAPRETO;
+    margin-bottom: 20px;
+  }
+  
+  .login-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .login-footer {
+    color: $FURIAPRETO;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+
+  .login-footer a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .error-message {
+    margin-top: 10px;
+    color: red;
+    font-size: 14px;
+  }
+  

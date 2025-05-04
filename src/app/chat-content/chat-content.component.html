@@ -1,0 +1,34 @@
+<div class="chat-content">
+  <ng-container *ngIf="chatId && chat; else selecioneUmChat">
+    <div class="chat-header">
+      <div class="chat-avatar"></div>
+      <div class="chat-name">{{ chat.nome }}</div>
+    </div>
+
+    <div class="chat-messages" #chatMessages>
+      <div *ngFor="let mensagem of mensagens.slice().reverse()">
+        <div class="message sent" *ngIf="mensagem.autor">
+          <div class="message-text">{{ mensagem.conteudo }}</div>
+          <div class="message-date">{{ mensagem.dataEnvio | date: 'short' }}</div>
+        </div>
+
+        <div class="message received" *ngIf="!mensagem.autor">
+          <div class="message-author">{{ mensagem.usuario.nome }}</div>
+          <div class="message-text">{{ mensagem.conteudo }}</div>
+          <div class="message-date">{{ mensagem.dataEnvio | date: 'short' }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" placeholder="Digite uma mensagem..." [(ngModel)]="mensagem" (keydown.enter)="enviarMensagem()">
+      <button (click)="enviarMensagem()">Enviar</button>
+    </div>
+  </ng-container>
+
+  <ng-template #selecioneUmChat>
+    <div class="no-chat-selected">
+      <p>Selecione um chat</p>
+    </div>
+  </ng-template>
+</div>

@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+$CORTEXTO: white;
+
+$FURIAPRETO: black;
+
+/* Estilos globais para garantir que o footer fique fixo ao rodapé */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .wrapper {
+    display: flex;
+    min-height: 85vh;
+    flex-direction: column;
+    background-image: url('assets/882db583081525.5ea5da24d7c69.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .main-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex: 1; /* Isso faz com que o conteúdo principal ocupe o espaço disponível */
+  }

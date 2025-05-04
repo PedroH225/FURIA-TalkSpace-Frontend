@@ -1,0 +1,181 @@
+@import '../../styles.scss';
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    
+}
+
+.chat-container {
+    display: flex;
+    height: 100vh;
+    
+}
+
+.chat-sidebar {
+    width: 300px;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    overflow-y: auto;
+    
+}
+
+.chat-sidebar .chat-item {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.chat-sidebar .chat-item:hover {
+    background-color: #f0f0f0;
+}
+
+.chat-sidebar .chat-item .chat-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #3498db;
+    margin-right: 10px;
+}
+
+.chat-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    height: 100%; /* Garantir que a div ocupe toda a altura possível */
+    max-height: calc(100vh - 80px); /* Subtraia o tamanho do cabeçalho (aproximadamente 80px) */
+    background-color: rgba(255, 255, 255, 0.8); // branco com 80% de opacidade
+    border-radius: 20px;
+
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.chat-header .chat-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $FURIAPRETO;
+    margin-right: 10px;
+}
+
+.chat-header .chat-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto; /* Sempre mostrar a barra de rolagem, mesmo que não seja necessário */
+    background-color: transparent; // branco com 80% de opacidade
+    display: flex;
+    flex-direction: column-reverse;
+    scrollbar-width: thin; /* Para navegadores com suporte */
+    scrollbar-color: $FURIAPRETO #f4f4f4; /* Cor da barra de rolagem */
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+.message.sent {
+    text-align: right;
+}
+
+.message.received {
+    text-align: left;
+}
+
+.message-text {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 15px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.message-date {
+    font-size: 13px;
+
+}
+
+.message-author {
+    font-size: 14px;
+
+}
+
+
+.message.sent .message-text {
+    background-color: $FURIAPRETO;
+    color: #fff;
+}
+
+.message.received .message-text {
+    background-color: #f1f1f1;
+}
+
+.chat-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-input input {
+    width: 87%;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.chat-input button {
+    padding: 10px 15px;
+    background-color: $FURIAPRETO;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background-color: $FURIAPRETO;
+}
+
+/* Para navegadores Webkit (como Chrome, Safari) */
+.chat-messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background-color: $FURIAPRETO;
+    border-radius: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background-color: #f4f4f4;
+}
+
+.no-chat-selected {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 2rem;
+    color: $FURIAPRETO;
+    padding: 1rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
