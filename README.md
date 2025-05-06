@@ -33,7 +33,13 @@ cd FURIA-TalkSpace-Frontend/
 npm install
 ```
 
-3. Acesse o projeto no navegador
+3. Execute o projeto
+```bash
+ng serve
+```
+
+
+4. Acesse o projeto no navegador
 Link: http://localhost:4200
 
 ## Funcionalidades
