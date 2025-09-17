@@ -1,4 +1,7 @@
 # FURIA TalkSpace Frontend
+
+> Read in other languages: [English](README.en.md)
+
 ## Descrição
 A **FURIA TalkSpace**, é uma plataforma digital de chats voltada para os fãs das equipes da organização FURIA eSports. A plataforma permite que os torcedores se comuniquem entre si sobre as diferentes equipes da FURIA em diversos jogos, por meio de chats com diversos temas.
 
